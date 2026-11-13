@@ -1,0 +1,4 @@
+Evidências do projeto:
+- api_java_rds_resposta.png e validacao_java_rds.txt: validação do backend Java/Spring Boot conectado ao Amazon RDS e leitura de três medições.
+- dashboard_integrado_java_rds.png e validacao_integracao_front_back.txt: validação visual do front React/Vite conectado ao backend Java; painel exibiu API CONECTADA e indicadores do RDS.
+- api_rds_resposta_200.png e validacao_api.txt: evidência histórica da versão Python original, mantida apenas como registro da etapa anterior.

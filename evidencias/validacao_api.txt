@@ -1,0 +1,5 @@
+REGISTRO DA VERSÃO PYTHON ORIGINAL (antes da migração para Java)
+Data: 05/11/2026
+A API Python respondeu HTTP 200 no RDS para GET /api/datacenters/1/energy-summary.
+Leituras: 3 | energia total: 457 kWh | energia de TI: 247 kWh | PUE: 1,85 | custo: R$ 374,74 | alerta: PUE acima do limite (1,80).
+Este registro e a captura api_rds_resposta_200.png não comprovam execução da nova versão Java. Refaça a validação após configurar Java/Maven e executar o projeto migrado.

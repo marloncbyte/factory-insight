@@ -1,0 +1,18 @@
+VALIDAÇÃO DO BACKEND JAVA — AMAZON RDS
+
+Data: 06/11/2026
+Aplicação: EnergiaDC API — Java 21 / Spring Boot
+Banco: PostgreSQL 18.3 no Amazon RDS
+Endpoint consultado: GET /api/datacenters/1/energy-summary
+Período: 2026-11-05T00:00:00Z até 2026-11-06T00:00:00Z
+
+Resultado retornado pela API:
+- Datacenter: DC Sao Paulo (id 1)
+- Leituras: 3
+- Consumo total: 457 kWh
+- Consumo de TI: 247 kWh
+- PUE: 1,85; limite configurado: 1,80
+- Custo estimado: R$ 374,74
+- Alerta: PUE_ABOVE_LIMIT (warning)
+
+A captura api_java_rds_resposta.png mostra a chamada executada no PowerShell e o JSON retornado. A aplicação Java iniciou conectada ao RDS e o endpoint leu os dados do banco remoto.

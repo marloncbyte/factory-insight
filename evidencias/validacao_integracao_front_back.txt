@@ -1,0 +1,10 @@
+VALIDAÇÃO DA INTEGRAÇÃO FRONT-END + BACK-END JAVA
+
+Data: 06/11/2026
+Front-end: React/Vite servido em http://localhost:8443
+Back-end: Java 21 / Spring Boot servido em http://127.0.0.1:8000
+Banco: PostgreSQL no Amazon RDS
+
+Resultado: a tela do painel exibiu o estado “API CONECTADA” e carregou do endpoint os dados de DC Sao Paulo para o período selecionado de 7 dias: 3 medições, 457 kWh totais, 247 kWh de TI, PUE 1,85, limite 1,80, custo estimado R$ 374,74 e alerta de PUE acima do limite.
+
+A captura dashboard_integrado_java_rds.png registra o painel carregado com os indicadores e gráficos alimentados pela resposta da API.
