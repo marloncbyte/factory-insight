@@ -8,7 +8,7 @@
 
 **Projeto Integrador · Superior de Tecnologia em Análise e Desenvolvimento de Sistemas**
 
-**Escola SENAI "Armando de Arruda Pereira" · São Caetano do Sul — SP**
+**Escola SENAI "Armando de Arruda Pereira"**
 
 **Módulo documentado neste repositório: EnergiaDC**
 
@@ -93,14 +93,11 @@ Na execução local, o backend também pode utilizar H2 para demonstração. As 
 factory-insight/
 ├── backend/
 │   ├── src/
-│   ├── pom.xml
-│   ├── .env.example
-│   └── iniciar_windows.bat
+│   └── pom.xml
 ├── frontend/
 │   ├── src/
 │   ├── public/
-│   ├── package.json
-│   └── .env.example
+│   └── package.json
 ├── database/
 │   └── schema.sql
 ├── docs/
@@ -108,7 +105,6 @@ factory-insight/
 │   ├── relatorio-tecnico.md
 │   └── apresentacao-institucional.md
 ├── evidencias/
-├── .gitignore
 └── README.md
 ```
 
@@ -166,10 +162,9 @@ No terminal, entre na pasta `backend`:
 
 ```powershell
 cd backend
-Copy-Item .env.example .env
 ```
 
-O arquivo de exemplo utiliza H2 local por padrão. Para iniciar:
+Configure as variáveis de ambiente necessárias para sua execução local. Para iniciar:
 
 ```powershell
 mvn spring-boot:run
@@ -183,7 +178,6 @@ Em outro terminal, entre na pasta `frontend`:
 
 ```powershell
 cd frontend
-Copy-Item .env.example .env
 corepack pnpm install
 corepack pnpm dev
 ```
@@ -223,6 +217,6 @@ Este trabalho foi desenvolvido no âmbito acadêmico da **Escola SENAI "Armando 
 **Factory Insight · Módulo EnergiaDC**
 
 Projeto Integrador — Superior de Tecnologia em Análise e Desenvolvimento de Sistemas  
-Escola SENAI "Armando de Arruda Pereira" · São Caetano do Sul — SP
+Escola SENAI "Armando de Arruda Pereira"
 
 </div>
