@@ -186,7 +186,7 @@ Abra o endereço local informado pelo Vite no terminal. A configuração de exem
 
 ### 3. Conexão com Amazon RDS
 
-Para utilizar um banco remoto, configure as variáveis de conexão no arquivo `.env` do backend, seguindo o modelo de `.env.example`. Não coloque senhas, certificados ou arquivos `.env` reais no GitHub.
+Para utilizar um banco remoto, configure as variáveis de conexão exigidas pela aplicação no ambiente em que o backend será iniciado. Não coloque senhas, certificados ou arquivos `.env` reais no GitHub.
 
 As configurações de rede e acesso ao RDS devem permitir a conexão somente a partir das origens autorizadas.
 
