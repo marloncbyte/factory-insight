@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/SENAI%20S%C3%A3o%20Paulo%20logo.png" alt="Logotipo SENAI São Paulo" width="260">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/SENAI_S%C3%A3o_Paulo_logo.png" alt="Logotipo SENAI São Paulo" width="260">
 
 # Factory Insight
 
@@ -26,14 +26,14 @@ Este repositório documenta o módulo **EnergiaDC**, dedicado ao monitoramento e
 
 ## Equipe do projeto
 
-Desenvolvido pelos estudantes:
-
-- Marlon Carvalho de Farias
-- Leonardo da Silva
-- Pedro Henrique Gomes dos Santos
-- Victor de Freitas Queijo
-- Patrick Romano Silva
-- Lucas Siqueira Apolinário
+| Integrante |
+|---|
+| Marlon Carvalho de Farias |
+| Leonardo da Silva |
+| Pedro Henrique Gomes dos Santos |
+| Victor de Freitas Queijo |
+| Patrick Romano Silva |
+| Lucas Siqueira Apolinário |
 
 **Instituição:** Escola SENAI "Armando de Arruda Pereira"  
 **Curso:** Superior de Tecnologia em Análise e Desenvolvimento de Sistemas  
@@ -208,7 +208,7 @@ As configurações de rede e acesso ao RDS devem permitir a conexão somente a p
 
 ## Identidade institucional
 
-Este trabalho foi desenvolvido no âmbito acadêmico da **Escola SENAI "Armando de Arruda Pereira"**. O logotipo SENAI-SP utilizado nesta página é disponibilizado pelo Wikimedia Commons, com origem indicada como o portal oficial do SENAI-SP. Consulte o [Manual de Identidade Visual SENAI-SP](https://www.sp.senai.br/noticia/manual-de-identidade-visual) para orientações de aplicação da marca.
+Este trabalho foi desenvolvido no âmbito acadêmico da **Escola SENAI "Armando de Arruda Pereira"**. A marca SENAI-SP segue o [Manual de Identidade Visual da instituição](https://www.sp.senai.br/noticia/manual-de-identidade-visual).
 
 ---
 
