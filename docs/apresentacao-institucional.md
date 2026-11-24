@@ -8,7 +8,7 @@
 | Módulo documentado | EnergiaDC |
 | Curso | Superior de Tecnologia em Análise e Desenvolvimento de Sistemas |
 | Instituição | Escola SENAI "Armando de Arruda Pereira" |
-| Localidade | São Caetano do Sul — SP |
+| Localidade | São Paulo — SP |
 
 ## Integrantes
 
