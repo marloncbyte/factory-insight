@@ -1,43 +1,63 @@
 <div align="center">
 
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/SENAI%20S%C3%A3o%20Paulo%20logo.png" alt="Logotipo SENAI São Paulo" width="260">
+
 # Factory Insight
 
 ### Plataforma de monitoramento e análise de indicadores industriais
 
-**Projeto Integrador · Análise e Desenvolvimento de Sistemas · 2º semestre**
+**Projeto Integrador · Superior de Tecnologia em Análise e Desenvolvimento de Sistemas**
 
-Módulo desenvolvido pelo grupo: **EnergiaDC — monitoramento energético de datacenters**
+**Escola SENAI "Armando de Arruda Pereira" · São Caetano do Sul — SP**
+
+**Módulo documentado neste repositório: EnergiaDC**
 
 </div>
 
 ---
 
-## Sobre o projeto
+## Apresentação
 
-O **Factory Insight** é o projeto integrador acadêmico voltado à organização e visualização de indicadores industriais. Neste repositório está documentado o módulo **EnergiaDC**, desenvolvido pelo grupo para consultar e apresentar indicadores de consumo energético de um datacenter.
+O **Factory Insight** é um projeto acadêmico desenvolvido no contexto do Projeto Integrador do curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas. Seu propósito é organizar e apresentar indicadores relacionados a processos industriais por meio de uma aplicação web.
 
-A aplicação reúne uma interface web em React, uma API REST em Java com Spring Boot e um banco de dados relacional. O objetivo desta etapa é transformar os registros de consumo em informações que possam ser acompanhadas por meio de indicadores, gráficos e alertas.
+Este repositório documenta o módulo **EnergiaDC**, dedicado ao monitoramento e à análise de indicadores de consumo energético de um datacenter. A aplicação reúne uma interface web, uma API REST e um banco de dados relacional para transformar registros de consumo em informações visuais e indicadores de apoio à análise.
 
-> Este repositório registra o desenvolvimento do módulo EnergiaDC dentro do projeto maior Factory Insight. O escopo e o status descritos aqui se limitam ao material e às validações disponíveis nesta versão.
+> **Escopo:** este repositório apresenta o módulo EnergiaDC dentro do projeto maior Factory Insight. As funcionalidades descritas refletem a versão acadêmica disponível e as validações registradas pela equipe.
+
+## Equipe do projeto
+
+Desenvolvido pelos estudantes:
+
+- Marlon Carvalho de Farias
+- Leonardo da Silva
+- Pedro Henrique Gomes dos Santos
+- Victor de Freitas Queijo
+- Patrick Romano Silva
+- Lucas Siqueira Apolinário
+
+**Instituição:** Escola SENAI "Armando de Arruda Pereira"  
+**Curso:** Superior de Tecnologia em Análise e Desenvolvimento de Sistemas  
+**Projeto:** Projeto Integrador — Factory Insight
 
 ## Visão geral da aplicação
 
-A interface apresenta:
-- Indicadores de consumo total, consumo de TI, PUE e custo estimado;
-- Seleção de período para atualizar a consulta;
-- Gráfico de comparação entre consumo total e consumo de TI;
-- Gráfico de distribuição entre TI e demais cargas;
-- Exibição do período consultado e da quantidade de medições;
-- Aviso quando o PUE calculado ultrapassa o limite configurado;
+O módulo EnergiaDC apresenta:
+
+- Indicadores de consumo total e consumo de TI;
+- Cálculo do índice PUE (*Power Usage Effectiveness*);
+- Estimativa de custo energético;
+- Seleção de período para consulta;
+- Gráficos para comparação e distribuição do consumo;
+- Aviso quando o PUE ultrapassa o limite configurado;
 - Indicador visual do estado da conexão com a API.
 
-### Tela do dashboard
+### Dashboard
 
 ![Dashboard EnergiaDC integrado à API Java e ao banco RDS](evidencias/dashboard_integrado_java_rds.png)
 
 *Captura de evidência da integração registrada em 06/11/2026. Os valores exibidos correspondem à consulta validada naquele momento.*
 
-## Como os componentes se comunicam
+## Arquitetura da solução
 
 ```text
 Usuário
@@ -54,7 +74,7 @@ Backend (Java + Spring Boot)
 Banco relacional (PostgreSQL / Amazon RDS)
 ```
 
-Na execução local, o backend também pode utilizar H2 para demonstração. A configuração de conexão é feita por variáveis de ambiente.
+Na execução local, o backend também pode utilizar H2 para demonstração. As configurações de conexão são realizadas por variáveis de ambiente.
 
 ## Tecnologias utilizadas
 
@@ -63,7 +83,7 @@ Na execução local, o backend também pode utilizar H2 para demonstração. A c
 | Frontend | React, Vite, Recharts |
 | Backend | Java 21, Spring Boot, Spring Web |
 | Persistência | Spring Data JPA / Hibernate |
-| Banco de dados | PostgreSQL (RDS) e H2 para execução local |
+| Banco de dados | PostgreSQL (Amazon RDS) e H2 para execução local |
 | Documentação da API | Springdoc / OpenAPI / Swagger UI |
 | Versionamento | Git e GitHub |
 
@@ -85,7 +105,8 @@ factory-insight/
 │   └── schema.sql
 ├── docs/
 │   ├── modelo-de-classes.md
-│   └── relatorio-tecnico.md
+│   ├── relatorio-tecnico.md
+│   └── apresentacao-institucional.md
 ├── evidencias/
 ├── .gitignore
 └── README.md
@@ -93,17 +114,17 @@ factory-insight/
 
 ## Funcionalidades e API
 
-### Endpoint principal
+### Consulta do resumo energético
 
 `GET /api/datacenters/{datacenter_id}/energy-summary`
 
-Parâmetros de consulta:
+Parâmetros:
 - `start`: início do período em formato ISO 8601;
 - `end`: fim do período em formato ISO 8601.
 
-O endpoint retorna informações do datacenter, período, quantidade de medições, consumo total, consumo de TI, PUE, limite configurado, custo estimado e possível alerta.
+O endpoint retorna informações do datacenter, período consultado, quantidade de medições, consumo total, consumo de TI, PUE, limite configurado, custo estimado e possível alerta.
 
-### Endpoint de saúde
+### Verificação de saúde
 
 `GET /health`
 
@@ -117,7 +138,7 @@ Com o backend em execução, a documentação Swagger UI fica disponível em `/d
 
 - **PUE:** consumo total dividido pelo consumo de TI.
 - **Custo estimado:** consumo total em kWh multiplicado pela tarifa cadastrada em R$/kWh.
-- **Alerta de PUE:** é retornado quando o PUE calculado ultrapassa o limite configurado para o datacenter.
+- **Alerta de PUE:** retornado quando o PUE calculado ultrapassa o limite configurado para o datacenter.
 
 ## Evidências de validação
 
@@ -175,27 +196,33 @@ Para utilizar um banco remoto, configure as variáveis de conexão no arquivo `.
 
 As configurações de rede e acesso ao RDS devem permitir a conexão somente a partir das origens autorizadas.
 
-## Observações sobre o escopo atual
+## Observações sobre o escopo acadêmico atual
 
 - O login presente no frontend é uma simulação local; não representa autenticação validada pelo backend.
 - A API disponibiliza um resumo agregado por período. Portanto, os gráficos atuais representam os totais retornados pela API, e não uma série histórica detalhada por hora.
 - A interface contém opções de navegação visual, mas as telas de Racks, Histórico e Relatórios não devem ser consideradas módulos funcionais completos nesta versão.
 - A evidência de integração com RDS registra um teste realizado em 06/11/2026. Ela não garante que a infraestrutura esteja disponível continuamente.
-- Não estão sendo declaradas como concluídas etapas futuras do cronograma do Projeto Integrador.
+- Este é um protótipo acadêmico em desenvolvimento. As funcionalidades e etapas futuras não são apresentadas como concluídas.
 
 ## Documentação complementar
 
+- [Apresentação institucional e identificação acadêmica](docs/apresentacao-institucional.md)
 - [Relatório técnico do backend](docs/relatorio-tecnico.md)
 - [Modelo de classes](docs/modelo-de-classes.md)
 - [Script de criação do banco](database/schema.sql)
 - [Evidências de validação](evidencias/LEIA-ME.txt)
 
+## Identidade institucional
+
+Este trabalho foi desenvolvido no âmbito acadêmico da **Escola SENAI "Armando de Arruda Pereira"**. O logotipo SENAI-SP utilizado nesta página é disponibilizado pelo Wikimedia Commons, com origem indicada como o portal oficial do SENAI-SP. Consulte o [Manual de Identidade Visual SENAI-SP](https://www.sp.senai.br/noticia/manual-de-identidade-visual) para orientações de aplicação da marca.
+
 ---
 
-## Projeto acadêmico
+<div align="center">
 
-Desenvolvido como parte do **Projeto Integrador do curso de Análise e Desenvolvimento de Sistemas — 2º semestre**.
+**Factory Insight · Módulo EnergiaDC**
 
-**Factory Insight** é o nome do projeto integrador. **EnergiaDC** identifica o módulo desenvolvido e documentado neste repositório.
+Projeto Integrador — Superior de Tecnologia em Análise e Desenvolvimento de Sistemas  
+Escola SENAI "Armando de Arruda Pereira" · São Caetano do Sul — SP
 
-*Repositório destinado à documentação e ao versionamento do desenvolvimento acadêmico do grupo.*
+</div>
