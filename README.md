@@ -130,7 +130,7 @@ Verifica se a API está respondendo.
 
 Com o backend em execução, a documentação Swagger UI fica disponível em `/docs` e a especificação OpenAPI em `/openapi.json`.
 
-## Indicadores calculados
+## Cálculos do consumo energético
 
 - **PUE:** consumo total dividido pelo consumo de TI.
 - **Custo estimado:** consumo total em kWh multiplicado pela tarifa cadastrada em R$/kWh.
