@@ -16,7 +16,7 @@
 
 ---
 
-## Apresentação
+## Sobre o projeto
 
 O **Factory Insight** é um projeto acadêmico desenvolvido no contexto do Projeto Integrador do curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas. Seu propósito é organizar e apresentar indicadores relacionados a processos industriais por meio de uma aplicação web.
 
