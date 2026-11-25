@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/SENAI_S%C3%A3o_Paulo_logo.png" alt="Logotipo SENAI São Paulo" width="260">
+<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/SENAI_S%C3%A3o_Paulo_logo.png/960px-SENAI_S%C3%A3o_Paulo_logo.png" alt="Logotipo SENAI São Paulo" width="260">
 
 # Factory Insight
 
