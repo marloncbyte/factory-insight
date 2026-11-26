@@ -28,6 +28,7 @@ public class EnergyReading {
         this.datacenter = datacenter; this.measuredAt = measuredAt; this.energyTotalKwh = total; this.energyItKwh = it;
     }
     public Integer getId() { return id; }
+    public DataCenter getDatacenter() { return datacenter; }
     public Instant getMeasuredAt() { return measuredAt; }
     public BigDecimal getEnergyTotalKwh() { return energyTotalKwh; }
     public BigDecimal getEnergyItKwh() { return energyItKwh; }

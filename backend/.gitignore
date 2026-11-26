@@ -1,0 +1,8 @@
+.env
+*.pem
+*.key
+/data/
+target/
+.idea/
+.vscode/
+*.log

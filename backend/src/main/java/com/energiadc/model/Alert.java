@@ -25,4 +25,10 @@ public class Alert {
         this.reading = reading; this.alertType = alertType; this.severity = severity;
         this.message = message; this.createdAt = Instant.now();
     }
+    public Integer getId() { return id; }
+    public EnergyReading getReading() { return reading; }
+    public String getAlertType() { return alertType; }
+    public String getSeverity() { return severity; }
+    public String getMessage() { return message; }
+    public Instant getCreatedAt() { return createdAt; }
 }
