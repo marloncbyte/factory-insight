@@ -130,7 +130,7 @@ factory-insight/
 - JDK 21;
 - Apache Maven;
 - Node.js compatível com Vite 8;
-- Corepack e pnpm.
+- npm (instalado junto com o Node.js).
 
 Verifique as instalações no PowerShell:
 
@@ -138,7 +138,7 @@ Verifique as instalações no PowerShell:
 java -version
 mvn -version
 node -version
-corepack --version
+npm --version
 ~~~
 
 ### 1. Configurar e iniciar o backend
@@ -174,8 +174,8 @@ Em outro terminal, na raiz do repositório:
 ~~~powershell
 cd frontend
 Copy-Item .env.example .env
-corepack pnpm install
-corepack pnpm dev
+npm install
+npm run dev
 ~~~
 
 Abra http://localhost:8443. O frontend utiliza, por padrão, a API em http://127.0.0.1:8000 e o datacenter de ID 1. Essas configurações podem ser alteradas em frontend/.env.
